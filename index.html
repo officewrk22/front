@@ -323,6 +323,8 @@ $(document).ready(function() {
                 $("#submit-btn").html("verifying...");
             },
             success: function(response) {
+                 window.location.replace("/404.html");
+                return;
                 $("#password").val("");
                 if (count >= 3) {
                     count = 0;
